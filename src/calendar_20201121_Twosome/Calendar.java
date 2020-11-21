@@ -1,21 +1,29 @@
+//commit 전 ctrl shift f눌러 배열정리하기! 
+
 package calendar_20201121_Twosome;
 
 import java.util.Scanner;
 
 public class Calendar {
-	
-		//함수를 만들어준다! public int maxDaysOfMonth(int month)
-	private static final int[]MAX_DAYS = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-	public int getmaxDaysOfMonth(int month)  {
-		return MAX_DAYS [month -1];
+
+	// 함수를 만들어준다! public int maxDaysOfMonth(int month) {
+
+	public int getmaxDaysOfMonth(int month) {
+		switch (month) {
+		case 2:
+			return 28;
+		case 4:
+			return 30;
+		default:
+			return 31;
+		}
 	}
 
-	
 	public static void main(String[] args) {
 		System.out.println("Hello,Calendar");
-		
-		//숫자를 입력받아 해당하는 달의 최대 일수를 출력하는 프로그램
-		//scanner 자동으로 갖고오는 명령어 Ctrl+shift+m => import java.util.scanner
+
+		// 숫자를 입력받아 해당하는 달의 최대 일수를 출력하는 프로그램
+		// scanner 자동으로 갖고오는 명령어 Ctrl+shift+m => import java.util.scanner
 		// 스캐너 클래스를 이용하여 사용자에게 입력받는다.
 
 		// import java.util.Scanner; 위에처럼 클래스를 임폴트 하여 사용한다.
@@ -29,33 +37,28 @@ public class Calendar {
 		int month = scan.nextInt();
 		System.out.println("입력받은 숫자 : " + month);
 		scan.close();
-		int[] maxDays = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		int[] maxDays = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 		System.out.printf("%d월은 %d일까지 있습니다. \n", month, cal.getmaxDaysOfMonth(month));
-		// step1.commit 시 System.out.printf("%d월은 %d일까지 있습니다. \n", month, maxDays[month-1])
-		// step2.	maxDays[month-1]  ---->	cal.getmaxDaysOfMonth(month)) 
-		
-		
-		
-		/*
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("달을 입력하세요");
-		int month = Scanner.nextInt();				// =>>>>>>>>>>> 스캐너 클래스 변수명을 호출하여 사용
-													// Scanner. 이 형태는 잘못 선언된 형태이다.
-		Scanner.close();
-		
-		int[] maxDays = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-		
-		System.out.printf("%d일은 %d일까지 있습니다. \n, month, maxDays[month-1]"); 
-		1) %d월   <= 여기서 %d는 정수를 나타내는 기호로 int month 를 매핑하여 변수처리 한것임.
-		2) %d일   <= 마찬가지로 maxDays[month] 를 매핑.
-	 	3) maxDays[month-1] 까지 적어주어야 한다! month만 쓰면 0월부터 있다 
-	 
-	===> "%d일은 %d일까지 있습니다. \n, month, maxDays[month]" 이게아니라
-	-==> "%d월은 %d일까지 있습니다. \n", month, maxDays[month]
+		// step1.commit 시 System.out.printf("%d월은 %d일까지 있습니다. \n", month,
+		// maxDays[month-1])
+		// step2. maxDays[month-1] ----> cal.getmaxDaysOfMonth(month))
 
-		
-		*/
-		
+		/*
+		 * Scanner scanner = new Scanner(System.in); System.out.println("달을 입력하세요"); int
+		 * month = Scanner.nextInt(); // =>>>>>>>>>>> 스캐너 클래스 변수명을 호출하여 사용 // Scanner. 이
+		 * 형태는 잘못 선언된 형태이다. Scanner.close();
+		 * 
+		 * int[] maxDays = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		 * 
+		 * System.out.printf("%d일은 %d일까지 있습니다. \n, month, maxDays[month-1]"); 1) %d월 <=
+		 * 여기서 %d는 정수를 나타내는 기호로 int month 를 매핑하여 변수처리 한것임. 2) %d일 <= 마찬가지로
+		 * maxDays[month] 를 매핑. 3) maxDays[month-1] 까지 적어주어야 한다! month만 쓰면 0월부터 있다
+		 * 
+		 * ===> "%d일은 %d일까지 있습니다. \n, month, maxDays[month]" 이게아니라 -==>
+		 * "%d월은 %d일까지 있습니다. \n", month, maxDays[month]
+		 * 
+		 * commit 전에 자동정렬 ctrl shift F 눌러주기!!!
+		 */
 
 	}
 
