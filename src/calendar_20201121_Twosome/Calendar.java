@@ -7,16 +7,10 @@ import java.util.Scanner;
 public class Calendar {
 
 	// 함수를 만들어준다! public int maxDaysOfMonth(int month) {
+	private static final int[] MAX_DAYS = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
 	public int getmaxDaysOfMonth(int month) {
-		switch (month) {
-		case 2:
-			return 28;
-		case 4:
-			return 30;
-		default:
-			return 31;
-		}
+		return MAX_DAYS[month - 1];
 	}
 
 	public static void main(String[] args) {
@@ -37,7 +31,7 @@ public class Calendar {
 		int month = scan.nextInt();
 		System.out.println("입력받은 숫자 : " + month);
 		scan.close();
-		int[] maxDays = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+		int[] MaxDays = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 		System.out.printf("%d월은 %d일까지 있습니다. \n", month, cal.getmaxDaysOfMonth(month));
 		// step1.commit 시 System.out.printf("%d월은 %d일까지 있습니다. \n", month,
 		// maxDays[month-1])
