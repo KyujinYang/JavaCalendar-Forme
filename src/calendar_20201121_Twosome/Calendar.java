@@ -21,7 +21,7 @@ public class Calendar {
 		System.out.println("입력받은 숫자 : " + month);
 		scan.close();
 		int[] maxDays = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-		System.out.printf("%d월은 %d일까지 있습니다. \n", month, maxDays[month]);
+		System.out.printf("%d월은 %d일까지 있습니다. \n", month, maxDays[month-1]);
 		
 		
 		
@@ -34,9 +34,10 @@ public class Calendar {
 		
 		int[] maxDays = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		
-		System.out.printf("%d일은 %d일까지 있습니다. \n, month, maxDays[month]");
+		System.out.printf("%d일은 %d일까지 있습니다. \n, month, maxDays[month-1]"); 
 		1) %d월   <= 여기서 %d는 정수를 나타내는 기호로 int month 를 매핑하여 변수처리 한것임.
 		2) %d일   <= 마찬가지로 maxDays[month] 를 매핑.
+	 	3) maxDays[month-1] 까지 적어주어야 한다! month만 쓰면 0월부터 있다 
 	 
 	===> "%d일은 %d일까지 있습니다. \n, month, maxDays[month]" 이게아니라
 	-==> "%d월은 %d일까지 있습니다. \n", month, maxDays[month]
