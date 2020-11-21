@@ -3,7 +3,14 @@ package calendar_20201121_Twosome;
 import java.util.Scanner;
 
 public class Calendar {
+	
+		//함수를 만들어준다! public int maxDaysOfMonth(int month)
+	private static final int[]MAX_DAYS = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+	public int getmaxDaysOfMonth(int month)  {
+		return MAX_DAYS [month -1];
+	}
 
+	
 	public static void main(String[] args) {
 		System.out.println("Hello,Calendar");
 		
@@ -15,13 +22,17 @@ public class Calendar {
 		// 1. 스캐너 클래스 선언
 		Scanner scan = new Scanner(System.in);
 		// 2. 달 입력 메시지 출력
+		Calendar cal = new Calendar();
+		// 2-1.캘린더도 만들어 준다!
 		System.out.println("달을 입력하세요");
 		// 3. 스캐너를 통해 사용자로부터 콘솔에 값 입력
 		int month = scan.nextInt();
 		System.out.println("입력받은 숫자 : " + month);
 		scan.close();
 		int[] maxDays = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-		System.out.printf("%d월은 %d일까지 있습니다. \n", month, maxDays[month-1]);
+		System.out.printf("%d월은 %d일까지 있습니다. \n", month, cal.getmaxDaysOfMonth(month));
+		// step1.commit 시 System.out.printf("%d월은 %d일까지 있습니다. \n", month, maxDays[month-1])
+		// step2.	maxDays[month-1]  ---->	cal.getmaxDaysOfMonth(month)) 
 		
 		
 		
