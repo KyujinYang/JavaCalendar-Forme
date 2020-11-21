@@ -11,7 +11,7 @@ public class sum_of_two_numbers {
 		//입력: 키보드로 두 수의 입력을 받는다.
 		Scanner scanner = new Scanner(System.in);
 		//scnner를 열었다!
-		//scanner 자동으로 갖고오는 명령어 Ctrl+shift+n => improt java.util.scanner
+		//scanner 자동으로 갖고오는 명령어 Ctrl+shift+m => improt java.util.scanner
 		String s1, s2;
 		System.out.println("두 수를 입력하세요");
 	
