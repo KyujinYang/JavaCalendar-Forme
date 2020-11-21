@@ -16,6 +16,12 @@ public class Calendar {
 	public static void main(String[] args) {
 		System.out.println("Hello,Calendar");
 
+		
+		
+		
+		
+		
+		
 		// 숫자를 입력받아 해당하는 달의 최대 일수를 출력하는 프로그램
 		// scanner 자동으로 갖고오는 명령어 Ctrl+shift+m => import java.util.scanner
 		// 스캐너 클래스를 이용하여 사용자에게 입력받는다.
@@ -26,17 +32,32 @@ public class Calendar {
 		// 2. 달 입력 메시지 출력
 		Calendar cal = new Calendar();
 		// 2-1.캘린더도 만들어 준다!
+		
+		System.out.println("반복횟수를 입력하세요");
+		//step3. 반복문설정플러스~~!!
+		int repeat = scan.nextInt();
+		//step3. 횟수를 잘 알때는 for, 횟수를 잘 알지 못할 때는 while 쓴다.
+		scan.close();
+		for(int i =0; i< repeat; i++) {
+			//step3. n번 반복하는 코드! 앞으로 for문 쓸 경우는 이렇게 자주쓸거다.
+			int month = scan.nextInt();
+			System.out.printf("%d월은 %d일까지 있습니다. \n", month, cal.getmaxDaysOfMonth(month));
+		}
+		
+		
+		/*
 		System.out.println("달을 입력하세요");
 		// 3. 스캐너를 통해 사용자로부터 콘솔에 값 입력
-		int month = scan.nextInt();
+	
 		System.out.println("입력받은 숫자 : " + month);
 		scan.close();
 		int[] MaxDays = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-		System.out.printf("%d월은 %d일까지 있습니다. \n", month, cal.getmaxDaysOfMonth(month));
+		
 		// step1.commit 시 System.out.printf("%d월은 %d일까지 있습니다. \n", month,
 		// maxDays[month-1])
 		// step2. maxDays[month-1] ----> cal.getmaxDaysOfMonth(month))
-
+*/
+		
 		/*
 		 * Scanner scanner = new Scanner(System.in); System.out.println("달을 입력하세요"); int
 		 * month = Scanner.nextInt(); // =>>>>>>>>>>> 스캐너 클래스 변수명을 호출하여 사용 // Scanner. 이
