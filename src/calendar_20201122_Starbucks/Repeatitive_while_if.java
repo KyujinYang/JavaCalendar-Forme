@@ -31,7 +31,7 @@ public class Repeatitive_while_if {
 		while (true) {
 			// step4-1.(기존)while (month != -1) {
 			// step3. n번 반복하는 코드! 앞으로 for문 쓸 경우는 이렇게 자주쓸거다.
-			// step4. for 말고 while문 이용
+			// step4. for 말고 while문 이
 			System.out.println("달을 입력하세요");
 			System.out.print(PROMPT);
 			month = scan.nextInt();
@@ -49,5 +49,12 @@ public class Repeatitive_while_if {
 
 		System.out.printf("-1이니 Bye~");
 		scan.close();
+	}
+
+	public void printCalendar(int i, int month) {
+		
+		
+	
+		
 	}
 }

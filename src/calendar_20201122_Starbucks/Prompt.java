@@ -9,7 +9,8 @@ public class Prompt {
 
 	public void runPrompt() {
 		Scanner scan = new Scanner(System.in);
-		Repeatitive_while_if cal = new Repeatitive_while_if();
+		//Repeatitive_while_if cal = new Repeatitive_while_if();
+		Virtual_calendar_output cal = new Virtual_calendar_output();
 
 		int month = 3;
 
@@ -19,7 +20,9 @@ public class Prompt {
 			System.out.print(PROMPT);
 			month = scan.nextInt();
 
+			// -1 이면 루프를 중지시키고 메시지를 출력한다.
 			if (month == -1) {
+				System.out.printf("이만 가보겠습니다~총총총");
 				break;
 			}
 			// step4. -1이면 이 무한루프를 빠져나와라
@@ -27,18 +30,22 @@ public class Prompt {
 				continue;
 			}
 
-			System.out.printf("%d월은 %d일까지 있습니다. \n", month, cal.getmaxDaysOfMonth(month));
-		}
+			cal.printCalendar(2020, month); 
 
-		System.out.printf("이만 가보겠습니다~총총총");
+			
+	
+		}
+		
 		scan.close();
 	}
+	
 
 	public static void main(String[] args) {
 
 		// 셀 실행
 		Prompt P = new Prompt();
 		P.runPrompt();
-
+		
+		
 	}
 }
